@@ -95,7 +95,7 @@ async function execute(interaction) {
 	.setTitle('Upcoming Session')
 	.setAuthor({ name: 'Scheduler', iconURL: 'attachment://pfp.png' })
 	// .setDescription('*No date set*')
-    .setDescription(`**📌** ${process.env["LOCATION"]}\n\n**📅** ${data.session.date}\n**🕑** ${data.session.time}`)
+    .setDescription(`*${process.env["LOCATION"]}*\n\n**📅** ${data.session.date}\n**🕑** ${data.session.time}`)
 	.addFields(
 		{ name: '**Confirmed**', value: `${data.session.confirmed.length != members.length ? '⭕' : '✅'} *${data.session.confirmed.length}/${members.length} members attending.*` }
     )
